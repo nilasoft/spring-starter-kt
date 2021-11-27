@@ -1,0 +1,29 @@
+server:
+  servlet:
+    context-path: /api
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      javax.persistence.validation.mode: NONE
+  datasource:
+    username: kotlin_starter
+    password: secret
+    url: jdbc:postgresql://localhost:5432/kotlin_starter
+auth:
+  prefix: Bearer
+  expiration: 2592000000
+  secret: vG2t&$@CxcYa9zz#B8qF*TYs$Wa5p$7b5@Y3tFGbdJ75K*r@^FSdmqSsmMDQ%G6i
+assets:
+  storage: storage
+  cdn: http://localhost/
+springdoc:
+  api-docs:
+    path: /docs
+  swagger-ui:
+    path: /docs/swagger
+logging:
+  file:
+    name: application.log

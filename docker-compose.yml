@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+
+  db:
+    image: postgres
+    environment:
+      POSTGRES_DB: kotlin_starter
+      POSTGRES_USER: kotlin_starter
+      POSTGRES_PASSWORD: secret
+    ports:
+      - "5432:5432"
